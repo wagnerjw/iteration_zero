@@ -1,8 +1,8 @@
-import { EnvVarWarning } from '@/components/prebuilt/env/env-var-warning';
-import HeaderAuth from '@/components/prebuilt/auth/header-auth';
-import { hasEnvVars } from '@/lib/supabase/check-env-vars';
-import { jbmono } from '@/fonts/JetbrainsMono';
 import '@/app/globals.css';
+import HeaderAuth from '@/components/prebuilt/auth/header-auth';
+import { EnvVarWarning } from '@/components/prebuilt/env/env-var-warning';
+import { jbmono } from '@/fonts/JetbrainsMono';
+import { hasEnvVars } from '@/lib/supabase/check-env-vars';
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
@@ -20,8 +20,8 @@ export default function AccountLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={jbmono.className}>
-      <body className="bg-background text-foreground">
+    <html lang="en">
+      <body className={`${jbmono.className} bg-background text-foreground`}>
         <main className="min-h-screen flex flex-col items-center">
           <nav className="w-full flex justify-center border-b border-b-foreground/10 h-16">
             <div className="w-full flex justify-between items-center p-3 px-5 text-sm">

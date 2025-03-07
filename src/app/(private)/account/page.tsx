@@ -1,7 +1,7 @@
-import { redirect } from 'next/navigation';
-import { createClient } from '@/lib/supabase/server';
 import { Button } from '@/components/ui/button';
+import { createClient } from '@/lib/supabase/server';
 import Link from 'next/link';
+import { redirect } from 'next/navigation';
 
 export default async function AccountPage() {
   const supabase = await createClient();
@@ -15,7 +15,7 @@ export default async function AccountPage() {
   const currentTime = now.toLocaleTimeString();
 
   return (
-    <main>
+    <>
       <div className="flex flex-col items-center justify-center space-y-3 h-screen">
         <p>Most Recent Login Time: {currentTime}</p>
         <p>Last Login Time: {data.user.last_sign_in_at}</p>
@@ -27,6 +27,6 @@ export default async function AccountPage() {
           </Button>
         </Link>
       </div>
-    </main>
+    </>
   );
 }
