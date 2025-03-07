@@ -13,7 +13,7 @@
   },
   "scripts": {
     "prettier": "prettier --write .",
-    "fastapi-install": "pip install -r requirements.txt",
+    "fastapi-install": "echo MAKE SURE YOU HAVE VENV ACTIVATED!!! && pip install -r requirements.txt",
     "fastapi-dev": "python3 -m uvicorn api.index:app --reload",
     "next-dev": "cross-env NODE_OPTIONS='--inspect' next dev",
     "prepare": "pnpm add --save-dev husky",
