@@ -7,7 +7,7 @@
 - FastAPI backend API (optional)
 - Supabase for auth + db storage
 
-Requests to fastapi are rerouted via nextjs rewrites. See `next.config.js` for more info.
+Requests to FastAPI are rerouted via [NextJS rewrites](https://nextjs.org/docs/app/api-reference/config/next-config-js/rewrites). See `next.config.js` for more implementation.
 
 ## Getting Started
 
@@ -25,7 +25,7 @@ bun next-dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Note: NextJS API routes are only available once authenticated.
+Note: as of right now, NextJS API routes are only available once logged in. This might change in the future.
 
 ### Second, run the fastapi development server:
 
