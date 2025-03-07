@@ -13,6 +13,9 @@
 # testing
 /coverage
 
+# fastapi python api
+*/.venv/
+
 # next.js
 /.next/
 /out/
