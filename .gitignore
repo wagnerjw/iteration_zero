@@ -14,7 +14,7 @@
 /coverage
 
 # fastapi python api
-/api/.venv/
+api/.venv/
 
 # next.js
 /.next/
