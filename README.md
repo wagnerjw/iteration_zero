@@ -7,7 +7,7 @@
 - FastAPI backend API (optional)
 - Supabase for auth + db storage
 
-Requests to FastAPI are rerouted via [NextJS rewrites](https://nextjs.org/docs/app/api-reference/config/next-config-js/rewrites). See `next.config.js` for more implementation.
+Requests to FastAPI are rerouted via [NextJS rewrites](https://nextjs.org/docs/app/api-reference/config/next-config-js/rewrites). See `next.config.js` for implementation.
 
 ## Getting Started
 
