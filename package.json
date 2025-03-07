@@ -16,6 +16,7 @@
     "fastapi-install": "pip install -r requirements.txt",
     "fastapi-dev": "python3 -m uvicorn api.index:app --reload",
     "next-dev": "next dev",
+    "prepare": "pnpm add --save-dev husky",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -35,6 +36,8 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.7.1",
+    "@commitlint/config-conventional": "^19.7.1",
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
@@ -42,6 +45,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.2.1",
+    "husky": "^9.1.7",
     "prettier": "^3.5.3",
     "tailwindcss": "^4",
     "typescript": "^5"
