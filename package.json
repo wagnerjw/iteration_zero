@@ -1,7 +1,7 @@
 {
   "name": "iterationzero",
   "author": "jdubbs",
-  "description": "a Nextjs project template, with optional fastapi backend and supabase auth + db",
+  "description": "a Nextjs project template, with optional FastAPI backend and Supabase auth + db",
   "version": "0.1.0",
   "private": true,
   "homepage": "github.com/wagnerjw/iterationzero",
