@@ -32,7 +32,7 @@ export default async function AuthButton() {
               disabled
               className="opacity-75 cursor-none pointer-events-none"
             >
-            <Link href="/login">Sign in</Link>
+              <Link href="/login">Sign in</Link>
             </Button>
             <Button
               asChild
@@ -52,7 +52,12 @@ export default async function AuthButton() {
     <div className="flex items-center justify-between gap-20">
       <p>Hello, {user.email}!</p>
       <form action={signOutAction}>
-        <Button variant={'outline'} className="hover:text-white hover:bg-gray-900">Sign out</Button>
+        <Button
+          variant={'outline'}
+          className="hover:text-white hover:bg-gray-900"
+        >
+          Sign out
+        </Button>
       </form>
     </div>
   ) : (

@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
-import { jbmono } from "@/fonts/JetbrainsMono";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { jbmono } from '@/fonts/JetbrainsMono';
+import './globals.css';
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
@@ -8,8 +8,8 @@ const defaultUrl = process.env.VERCEL_URL
 
 export const metadata: Metadata = {
   metadataBase: new URL(defaultUrl),
-  title: "The Ultimate AI Starter Template",
-  description: "All The Things You Need To Get Started With AI",
+  title: 'The Ultimate AI Starter Template',
+  description: 'All The Things You Need To Get Started With AI',
 };
 
 export default function RootLayout({

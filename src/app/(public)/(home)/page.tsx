@@ -1,14 +1,14 @@
-import { createClient } from '@/lib/supabase/server'
+import { createClient } from '@/lib/supabase/server';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import Hero from "@/components/prebuilt/hero";
+import Hero from '@/components/prebuilt/hero';
 
 export default async function Home() {
-  const supabase = await createClient()
+  const supabase = await createClient();
 
-  const { data, error } = await supabase.auth.getUser()
+  const { data, error } = await supabase.auth.getUser();
   if (error || !data?.user) {
-    console.log(error)
+    console.log(error);
   }
 
   return (
@@ -16,19 +16,19 @@ export default async function Home() {
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
         <Hero />
         {data?.user ? (
-                  <div className="flex gap-2">
-                  <Button asChild size="sm" variant={'default'}>
-                    <Link href="/account">Go To Account</Link>
-                  </Button>
-                </div>
+          <div className="flex gap-2">
+            <Button asChild size="sm" variant={'default'}>
+              <Link href="/account">Go To Account</Link>
+            </Button>
+          </div>
         ) : (
-        <div className="flex gap-2">
-          <Button asChild size="sm" variant={'default'}>
-            <Link href="/login">Go To Account</Link>
-          </Button>
-        </div> )}
-      </main>  
+          <div className="flex gap-2">
+            <Button asChild size="sm" variant={'default'}>
+              <Link href="/login">Go To Account</Link>
+            </Button>
+          </div>
+        )}
+      </main>
     </div>
   );
 }
-

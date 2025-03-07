@@ -37,15 +37,15 @@ export default function Hero() {
       </div>
       <p className="text-black">starter template</p>
       <div className="p-20 space-x-6">
-
         <Link href="/login">
           <Button className="hover:text-white hover:bg-gray-900">Log In</Button>
         </Link>
 
         <Link href="https://github.com/wagnerjw">
-          <Button className="hover:bg-gray-200">GitHub <GitHubLogo /></Button>
+          <Button className="hover:bg-gray-200">
+            GitHub <GitHubLogo />
+          </Button>
         </Link>
-
       </div>
     </div>
   );

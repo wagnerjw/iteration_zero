@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @plugin "tailwindcss-animate";
 
@@ -44,7 +44,6 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
 }
-
 
 @layer base {
   :root {
@@ -102,7 +101,6 @@
     --chart-5: 340 75% 55%;
   }
 }
-
 
 @layer base {
   * {
