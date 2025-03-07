@@ -1,0 +1,32 @@
+import { redirect } from 'next/navigation'
+import { createClient } from '@/lib/supabase/server'
+import { Button } from '@/components/ui/button'
+import Link from 'next/link'
+
+export default async function AccountPage() {
+  const supabase = await createClient()
+
+  const { data, error } = await supabase.auth.getUser()
+  if (error || !data?.user) {
+    redirect('/login')
+  }
+
+  const now = new Date();
+  const currentTime = now.toLocaleTimeString();
+
+  return (
+    <main>
+      <div className="flex flex-col items-center justify-center space-y-3 h-screen">
+        <p>Most Recent Login Time: {currentTime}</p>
+        <p>Last Login Time: {data.user.last_sign_in_at}</p>
+        <p>Your Role Is: {data.user.role}</p>
+
+        <Link href="/"> 
+            <Button className="bg-black text-white hover:bg-gray-400 hover:text-gray-900">Go Home</Button>
+        </Link>
+      </div>
+      
+
+    </main>
+  );
+}
