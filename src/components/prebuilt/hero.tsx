@@ -1,14 +1,14 @@
 import Link from 'next/link';
+import { Button } from '../ui/button';
 import FastAPILogo from './logos/fastapi-logo';
+import GitHubLogo from './logos/github-logo';
 import NextLogo from './logos/next-logo';
 import SupabaseLogo from './logos/supabase-logo';
-import { Button } from '../ui/button';
-import GitHubLogo from './logos/github-logo';
 
 export default function Hero() {
   return (
     <div className="flex flex-col items-center">
-      <p className="text-black">not another</p>
+      <p className="text-black">a simple</p>
       <div className="flex gap-8 justify-center items-center">
         <a href="https://nextjs.org/" target="_blank" rel="noreferrer">
           <NextLogo />
@@ -41,12 +41,15 @@ export default function Hero() {
           <Button className="hover:text-white hover:bg-gray-900">Log In</Button>
         </Link>
 
-        <Link href="https://github.com/wagnerjw">
+        <Link href="https://github.com/wagnerjw/iteration_zero">
           <Button className="hover:bg-gray-200">
             GitHub <GitHubLogo />
           </Button>
         </Link>
       </div>
+      <Link href="/account">
+        <Button className="hover:bg-gray-200">Go To Account Page</Button>
+      </Link>
     </div>
   );
 }
