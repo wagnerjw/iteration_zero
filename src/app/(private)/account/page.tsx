@@ -22,7 +22,7 @@ export default async function AccountPage() {
         <p>Your Role Is: {data.user.role}</p>
 
         <Link href="/">
-          <Button className="bg-black text-white hover:bg-gray-400 hover:text-gray-900">
+          <Button className="bg-gray-300 text-black hover:bg-green-300">
             Go Home
           </Button>
         </Link>

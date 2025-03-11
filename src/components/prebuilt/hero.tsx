@@ -38,17 +38,21 @@ export default function Hero() {
       <p className="text-black">starter template</p>
       <div className="p-20 space-x-6">
         <Link href="/login">
-          <Button className="hover:text-white hover:bg-gray-900">Log In</Button>
+          <Button className="bg-gray-300 hover:text-black hover:bg-green-300">
+            Log In
+          </Button>
         </Link>
 
         <Link href="https://github.com/wagnerjw/iteration_zero">
-          <Button className="hover:bg-gray-200">
+          <Button className="bg-gray-300 hover:text-black hover:bg-green-300">
             GitHub <GitHubLogo />
           </Button>
         </Link>
       </div>
       <Link href="/account">
-        <Button className="hover:bg-gray-200">Go To Account Page</Button>
+        <Button className="bg-gray-300 hover:text-black hover:bg-green-300">
+          Go To Account Page
+        </Button>
       </Link>
     </div>
   );

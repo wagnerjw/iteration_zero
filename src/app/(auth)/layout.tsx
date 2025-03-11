@@ -1,6 +1,6 @@
-import type { Metadata } from 'next';
+import '@/app/globals.css';
 import { jbmono } from '@/fonts/JetbrainsMono';
-import './globals.css';
+import type { Metadata } from 'next';
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
