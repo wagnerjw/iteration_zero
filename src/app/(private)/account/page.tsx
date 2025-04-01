@@ -22,8 +22,10 @@ export default async function AccountPage() {
         <p>Your Role Is: {data.user.role}</p>
 
         <Link href="/">
-          <Button className="text-green-700 bg-gray-300 hover:text-black hover:bg-green-300">
-            Go Home
+          <Button 
+            variant={'default'}
+            className="text-black hover:bg-black hover:text-white">
+              Go Home
           </Button>
         </Link>
       </div>

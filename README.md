@@ -42,5 +42,3 @@ bun fastapi-dev
 ```
 
 Open [http://localhost:8000/api/py/healthcheck](http://localhost:8000/api/py/healthcheck) with your browser to see the FastAPI healthcheck endpoint.
-
-#
