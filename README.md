@@ -19,7 +19,7 @@ npm run next-dev
 yarn next-dev
 # or
 pnpm next-dev
-# or
+# or`
 bun next-dev
 ```
 
