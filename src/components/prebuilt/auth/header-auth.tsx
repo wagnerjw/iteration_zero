@@ -53,7 +53,7 @@ export default async function AuthButton() {
       <p>Hello, {user.email}!</p>
       <form action={signOutAction}>
         <Button
-          variant={'outline'}
+          variant={'default'}
           className="hover:text-white hover:bg-gray-900"
         >
           Sign out
