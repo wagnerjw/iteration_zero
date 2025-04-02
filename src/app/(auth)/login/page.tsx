@@ -1,9 +1,9 @@
-import { signInAction } from './actions';
+import { Input } from '@/components/old/old.input';
+import { Label } from '@/components/old/old.label';
 import { FormMessage, Message } from '@/components/prebuilt/form-message';
 import { SubmitButton } from '@/components/prebuilt/submit-button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
 import Link from 'next/link';
+import { signInAction } from './actions';
 
 export default async function Signup(props: {
   searchParams: Promise<Message>;
