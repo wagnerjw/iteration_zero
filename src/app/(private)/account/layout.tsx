@@ -1,6 +1,6 @@
 import '@/app/globals.css';
-import HeaderAuth from '@/components/prebuilt/auth/header-auth';
 import { EnvVarWarning } from '@/components/prebuilt/env/env-var-warning';
+import HeaderAuth from '@/components/prebuilt/header-auth';
 import { jbmono } from '@/fonts/JetbrainsMono';
 import { hasEnvVars } from '@/lib/supabase/check-env-vars';
 

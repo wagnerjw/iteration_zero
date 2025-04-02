@@ -59,6 +59,7 @@ export function UpdatePasswordForm({
                 <Input
                   id="password"
                   type="password"
+                  className=""
                   placeholder="New password"
                   required
                   value={password}
