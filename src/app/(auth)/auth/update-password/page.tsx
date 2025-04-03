@@ -1,4 +1,4 @@
-import { UpdatePasswordForm } from '@/components/old/old.update-password-form';
+import { UpdatePasswordForm } from '@/components/prebuilt/supabase/update-password-form';
 
 export default function Page() {
   return (
