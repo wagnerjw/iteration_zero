@@ -1,4 +1,4 @@
-import { signOutAction } from '@/app/(auth)/authActions';
+import { signOutAction } from '@/app/(auth)/_serverside_auth/authActions';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { hasEnvVars } from '@/lib/supabase/check-env-vars';
@@ -52,10 +52,7 @@ export default async function AuthButton() {
     <div className="flex items-center justify-between gap-20">
       <p>Hello, {user.email}!</p>
       <form action={signOutAction}>
-        <Button
-          variant={'default'}
-          className="hover:text-white hover:bg-black"
-        >
+        <Button variant={'default'} className="hover:text-white hover:bg-black">
           Sign out
         </Button>
       </form>

@@ -1,7 +1,10 @@
 import { Input } from '@/components/old/old.input';
 import { Label } from '@/components/old/old.label';
-import { FormMessage, Message } from '@/components/prebuilt/form-message';
 import { SubmitButton } from '@/components/prebuilt/submit-button';
+import {
+  FormMessage,
+  Message,
+} from '@/components/prebuilt/supabase/form-message';
 import { forgotPasswordAction } from './actions';
 
 export default async function ForgotPassword(props: {

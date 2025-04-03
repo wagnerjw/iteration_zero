@@ -1,8 +1,6 @@
 import '@/app/globals.css';
-import { EnvVarWarning } from '@/components/prebuilt/env/env-var-warning';
 import HeaderAuth from '@/components/prebuilt/header-auth';
 import { jbmono } from '@/fonts/JetbrainsMono';
-import { hasEnvVars } from '@/lib/supabase/check-env-vars';
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
@@ -25,7 +23,7 @@ export default function AccountLayout({
         <main className="items-center flex flex-col min-h-screen">
           <nav className="w-full flex justify-center border-b border-b-foreground/10 h-16">
             <div className="w-full flex justify-between items-center p-3 px-5 text-sm">
-              {!hasEnvVars ? <EnvVarWarning /> : <HeaderAuth />}
+              <HeaderAuth />
             </div>
           </nav>
           {children}

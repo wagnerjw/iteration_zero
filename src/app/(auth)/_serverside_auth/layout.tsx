@@ -8,7 +8,7 @@ const defaultUrl = process.env.VERCEL_URL
 
 export const metadata: Metadata = {
   metadataBase: new URL(defaultUrl),
-  title: 'Modern AI Starter Template',
+  title: 'AI Starter Template',
   description: 'All The Things You Need To Get Started With AI',
 };
 

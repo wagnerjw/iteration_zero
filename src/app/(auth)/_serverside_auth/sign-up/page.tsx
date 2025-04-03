@@ -1,9 +1,12 @@
-import { Input } from '@/components/old/old.input';
-import { Label } from '@/components/old/old.label';
-import { FormMessage, Message } from '@/components/prebuilt/form-message';
+import { signUpAction } from '@/app/(auth)/_serverside_auth/authActions';
 import { SubmitButton } from '@/components/prebuilt/submit-button';
+import {
+  FormMessage,
+  Message,
+} from '@/components/prebuilt/supabase/form-message';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
 import Link from 'next/link';
-import { signUpAction } from './actions';
 
 export default async function Signup(props: {
   searchParams: Promise<Message>;
