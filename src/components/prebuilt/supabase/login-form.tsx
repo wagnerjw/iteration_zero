@@ -39,7 +39,7 @@ export function LoginForm({
       });
       if (error) throw error;
       // Update this route to redirect to an authenticated route. The user already has an active session.
-      router.push('/protected');
+      router.push('/account');
     } catch (error: unknown) {
       setError(error instanceof Error ? error.message : 'An error occurred');
     } finally {
@@ -62,6 +62,7 @@ export function LoginForm({
               <div className="grid gap-2">
                 <Label htmlFor="email">Email</Label>
                 <Input
+                  className="text-text border-2 focus:bg-main focus:border-none grid gap-2"
                   id="email"
                   type="email"
                   placeholder="m@example.com"
@@ -70,8 +71,8 @@ export function LoginForm({
                   onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
-              <div className="grid gap-2">
-                <div className="flex items-center">
+              <div className="grid gap-2 ">
+                <div className="flex items-center ">
                   <Label htmlFor="password">Password</Label>
                   <Link
                     href="/auth/forgot-password"
@@ -81,8 +82,10 @@ export function LoginForm({
                   </Link>
                 </div>
                 <Input
+                  className="text-text border-2 focus:bg-main focus:border-none grid gap-2"
                   id="password"
                   type="password"
+                  placeholder="**********"
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
