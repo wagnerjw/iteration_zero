@@ -8,7 +8,7 @@ import SupabaseLogo from './logos/supabase-logo';
 export default function Hero() {
   return (
     <div className="flex flex-col items-center">
-      <p className="text-black">a simple</p>
+      <p className="text-black text-2xl">a simple</p>
       <div className="flex gap-8 justify-center items-center">
         <a href="https://nextjs.org/" target="_blank" rel="noreferrer">
           <NextLogo />
@@ -35,7 +35,7 @@ export default function Hero() {
           <SupabaseLogo />
         </a>
       </div>
-      <p className="text-black">starter template</p>
+      <p className="text-black text-2xl">starter template</p>
       <div className="p-20 space-x-6">
         <Link href="/login">
           <Button className="hover:text-white hover:bg-black">Log In</Button>
