@@ -50,7 +50,7 @@ export async function signInAction(formData: FormData) {
 export const signOutAction = async () => {
   const supabase = await createClient();
   await supabase.auth.signOut();
-  return redirect('/auth/login');
+  return redirect('/login');
 };
 
 export const forgotPasswordAction = async (formData: FormData) => {

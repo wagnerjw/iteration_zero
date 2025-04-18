@@ -31,15 +31,29 @@ export function LoginForm({
     const supabase = createClient();
     setIsLoading(true);
     setError(null);
-
+  
     try {
       const { error } = await supabase.auth.signInWithPassword({
         email,
         password,
       });
       if (error) throw error;
-      // Update this route to redirect to an authenticated route. The user already has an active session.
-      router.push('/account');
+  
+      // Fetch the user's profile or metadata to get the username
+      const { data: user, error: userError } = await supabase.auth.getUser();
+      if (userError || !user?.user.user_metadata?.username) {
+        throw new Error('Failed to retrieve username');
+      }
+  
+      const username = user.user.user_metadata.username;
+  
+      // Validate the username
+      if (!/^[a-zA-Z0-9_]+$/.test(username)) {
+        throw new Error('Invalid username. Only letters, numbers, and underscores are allowed.');
+      }
+  
+      // Redirect to the dynamic route based on the username
+      router.push(`/${username}`);
     } catch (error: unknown) {
       setError(error instanceof Error ? error.message : 'An error occurred');
     } finally {
@@ -62,10 +76,9 @@ export function LoginForm({
               <div className="grid gap-2">
                 <Label htmlFor="email">Email</Label>
                 <Input
-                  className="text-text border-2 focus:bg-main focus:border-none grid gap-2"
                   id="email"
                   type="email"
-                  placeholder="m@example.com"
+                  placeholder="j@example.com"
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -82,7 +95,6 @@ export function LoginForm({
                   </Link>
                 </div>
                 <Input
-                  className="text-text border-2 focus:bg-main focus:border-none grid gap-2"
                   id="password"
                   type="password"
                   placeholder="**********"
@@ -99,7 +111,7 @@ export function LoginForm({
             <div className="mt-4 text-center text-sm">
               Don&apos;t have an account?{' '}
               <Link
-                href="/auth/sign-up"
+                href="/sign-up"
                 className="underline underline-offset-4"
               >
                 Sign up

@@ -40,7 +40,7 @@ export async function updateSession(request: NextRequest) {
   } = await supabase.auth.getUser();
 
   // List of public routes this middleware should ignore
-  const publicRoutes = ['/', '/about', '/marketing'];
+  const publicRoutes = ['/', '/about', '/marketing', '/sign-up'];
 
   if (
     !user &&

@@ -17,6 +17,7 @@ export default async function AccountPage() {
   return (
     <>
       <div className="flex flex-col items-center justify-center space-y-3 h-screen">
+        <p>Username: {data.user.user_metadata.username}</p>
         <p>Most Recent Login Time: {currentTime}</p>
         <p>Last Login Time: {data.user.last_sign_in_at}</p>
         <p>Your Role Is: {data.user.role}</p>

@@ -7,7 +7,7 @@ import SupabaseLogo from './logos/supabase-logo';
 
 export default function Hero() {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center rounded-xl p-10  backdrop-blur-sm">
       <p className="text-black text-2xl">a simple</p>
       <div className="flex gap-8 justify-center items-center">
         <a href="https://nextjs.org/" target="_blank" rel="noreferrer">
