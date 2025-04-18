@@ -5,7 +5,7 @@ A full-stack project template featuring:
 - **FastAPI** for the backend (optional)
 - **Supabase** for authentication and database management
 
-This setup is ideal for developers seeking a robust starting point for modern web applications.
+This setup is ideal for developers seeking a robust starting point for modern AI web applications.
 
 ---
 
@@ -21,11 +21,3 @@ This setup is ideal for developers seeking a robust starting point for modern we
   - Handles user authentication and database operations.
   - Offers real-time capabilities and storage solutions.
 
----
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js (v14 or later)
-- Python 3.8+
