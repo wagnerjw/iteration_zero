@@ -5,7 +5,12 @@ import GitHubLogo from './logos/github-logo';
 import NextLogo from './logos/next-logo';
 import SupabaseLogo from './logos/supabase-logo';
 
-export default function Hero() {
+// (your existing Hero component code, updated to accept username prop)
+interface HeroProps {
+  username: string | null;
+}
+
+export default function Hero({ username }: HeroProps) {
   return (
     <div className="flex flex-col items-center rounded-xl p-10  backdrop-blur-sm">
       <p className="text-black text-2xl">a simple</p>
@@ -47,11 +52,20 @@ export default function Hero() {
           </Button>
         </Link>
       </div>
-      <Link href="/account">
-        <Button className="hover:text-white hover:bg-black">
-          Go To Account Page
+      {username ? (
+        <Link href={`/${username}`}>
+          <Button className="hover:text-white hover:bg-black">
+            Go To Account
+          </Button>
+        </Link>
+      ) : (
+        <Button
+          disabled
+          className="bg-gray-200 text-gray-900 cursor-not-allowed"
+        >
+          Go To Account
         </Button>
-      </Link>
+      )}
     </div>
   );
 }
