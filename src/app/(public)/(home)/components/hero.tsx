@@ -1,9 +1,9 @@
 import Link from 'next/link';
-import { Button } from '../ui/button';
-import FastAPILogo from './logos/fastapi-logo';
-import GitHubLogo from './logos/github-logo';
-import NextLogo from './logos/next-logo';
-import SupabaseLogo from './logos/supabase-logo';
+import FastAPILogo from '../../../../components/prebuilt/logos/fastapi-logo';
+import GitHubLogo from '../../../../components/prebuilt/logos/github-logo';
+import NextLogo from '../../../../components/prebuilt/logos/next-logo';
+import SupabaseLogo from '../../../../components/prebuilt/logos/supabase-logo';
+import { Button } from '../../../../components/ui/button';
 
 // (your existing Hero component code, updated to accept username prop)
 interface HeroProps {

@@ -1,4 +1,4 @@
-import { SubmitButton } from '@/components/prebuilt/submit-button';
+import { SubmitButton } from '@/app/(private)/[username]/components/submit-button';
 import {
   FormMessage,
   Message,
